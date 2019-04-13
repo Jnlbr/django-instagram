@@ -1,5 +1,8 @@
+# Python-Instagram
 
-## Commands used to develop this application
+An Instagram clone application made with python, using Django framework for learning purposes
+
+## Commands summary
 
 ### Python
 
@@ -24,25 +27,19 @@ $ call venv_folder_name/Scripts/activate
 ## manage.py
 
   $ py manage.py runserver
-> **Explanation**: **runserver** self explanatory
+> **Explanation**: **runserver** start the server
 
   $ py manage.py startapp app_name
-> **Explanation**: **startapp** self explanatory
-
-  $ py manage.py migrate
-> **Explanation**: perform migrations, basically executes migrations execute to update the DB
+> **Explanation**: **startapp** creates an app module
 
   $ py manage.py makemigrations
-> **Explanation**: looks out for the changes into models and creates a scripts to executes the changes with the previous command
-
-  $ py manage.py validate
-> **Explanation**: self explanatory
+> **Explanation**: creates new migrations based on models' changes
 
   $ py manage.py shell
-> **Explanation**: opens interactive console with django
+> **Explanation**: start interactive interpreter
 
   $ py manage.py createsuperuser
-> **Explanation**: self explanatory
+> **Explanation**: creates a super user
 
 
 # PDB
