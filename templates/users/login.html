@@ -1,0 +1,37 @@
+{% extends "users/base.html" %}
+
+{% block head_content %}
+  <title> Pygram sign in </title>
+{% endblock %}
+
+{% block container %}
+
+  {% if form.errors %}
+    <!-- .p.alert.alert-danger -->
+    <!-- <p class="alert alert-danger">{{error}}</p> -->
+    <p class="alert alert-danger">
+      Your username and password didn't match. Please try again
+    </p>
+  {% endif %}
+  <!-- Takes url's name to a normal url (names are declared in urls) -->
+  <form method="POST" action="{% url "users:login" %}">
+    <!-- Special token to make request -->
+    {% csrf_token %} 
+
+    <!-- .form-group>inpur.form-control -->
+    <div class="form-group">
+      <input type="text" placeholder="Username" name="username" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <input type="password" placeholder="Password" name="password" class="form-control">
+    </div>
+    
+    <button class="button btn btn-primary btn-block mt-5" type="submit"> Sign in </button>
+    
+  </form>
+
+  <p class="mt-4">
+    Don't have an account yet? <a href="{% url "users:signup" %}">Sign up here!</a>
+  </p>
+{% endblock %}
